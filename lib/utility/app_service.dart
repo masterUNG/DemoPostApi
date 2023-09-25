@@ -39,8 +39,10 @@ class AppService {
           DataModel dataModel = DataModel.fromMap(element);
           appController.dataModels.add(dataModel);
         }
+        Get.back();
       });
     } on Exception catch (e) {
+      Get.back();
       Get.snackbar('User Code False or Token Expile', 'Please Try Again',
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.red,
